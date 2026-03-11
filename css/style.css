@@ -20,8 +20,9 @@
     --c-dark: #222;
     --c-glass: #aaa;
 
-    --f-ui: Arial, sans-serif;
-    --f-formal: "Figtree", sans-serif;
+    --f-ss: sans-serif;
+    --f-system: Arial, var(--f-ss);
+    --f-type: "Figtree", var(--f-ss);
 
     --i-logo: url("../img/logo_clrz_dark.svg") no-repeat center / contain;
 
@@ -30,19 +31,19 @@
 
     --saturation: 150%;
 
-    --glass-bg: color-mix(in srgb, var(--c-glass) 12%, transparent);
+    --glass-bg: color-mix(in srgb, var(--c-glass) 10%, transparent);
 
     --glass-effect:
         inset 0 0 0 1px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 10%), transparent),
         inset 1.8px 3px 0px -2px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 90%), transparent),
         inset -2px -2px 0px -2px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 80%), transparent),
         inset -3px -8px 1px -6px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 60%), transparent),
-        inset -0.3px -1px 4px 0px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 12%), transparent),
-        inset -1.5px 2.5px 0px -2px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 20%), transparent),
+        inset -1px -1px 4px 0px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 10%), transparent),
+        inset -2px 2px 0px -2px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 20%), transparent),
         inset 0px 3px 4px -2px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 20%), transparent),
-        inset 2px -6.5px 1px -4px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 10%), transparent),
+        inset 2px -6px 1px -4px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 10%), transparent),
         0px 1px 5px 0px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 10%), transparent),
-        0px 6px 16px 0px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 8%), transparent);
+        0px 6px 16px 0px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 10%), transparent);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -69,7 +70,7 @@ body {
     background: var(--c-light);
 
     color: var(--c-dark);
-    font-family: var(--f-formal);
+    font-family: var(--f-type);
     font-weight: normal;
     font-style: normal;
 
@@ -141,9 +142,9 @@ a {
 
 /* CANVAS */
 .canvas {
-    width: calc(100% - 20px);
-    max-width: 1200px;
-    height: 640px;
+    width: calc(100% - 40px);
+    max-width: 800px;
+    height: 80dvh;
 
     position: relative;
 }
@@ -155,10 +156,10 @@ a {
     background: transparent;
 
     color: var(--c-dark);
-    font-family: var(--f-ui);
-    font-size: 120px;
+    font-family: var(--f-system);
+    font-size: 80px;
     font-weight: bold;
-    text-align: center;
+    text-align: justify;
     align-content: center;
 
     filter: blur(2px);
