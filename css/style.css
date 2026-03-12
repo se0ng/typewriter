@@ -123,6 +123,7 @@ a {
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .logo:hover,
